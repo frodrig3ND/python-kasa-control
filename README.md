@@ -1,9 +1,9 @@
-# `PyKasaCLI`
+# CLI
 
 **Usage**:
 
 ```console
-$ PyKasaCLI [OPTIONS] COMMAND [ARGS]...
+$ [OPTIONS] COMMAND [ARGS]...
 ```
 
 **Options**:
@@ -14,15 +14,25 @@ $ PyKasaCLI [OPTIONS] COMMAND [ARGS]...
 
 **Commands**:
 
-* `create-new-device`
-* `version`
+* `create-new-device`: Creates a new device in the DB Args: name...
+* `get-all-devices`: Display a list of all devices to terminal
+* `get-one-device`: Acquire a device on its id Args: id (int): id...
+* `turn-off-device`: Turn off a device based on its id Args: id...
+* `turn-on-device`: Turn on a device based on its id Args: id...
+* `version`: Get program version number
 
-## `PyKasaCLI create-new-device`
+## `create-new-device`
+
+Creates a new device in the DB
+
+Args:
+    name (str): Name to assing device
+    ip_addr (str): IP address of device
 
 **Usage**:
 
 ```console
-$ PyKasaCLI create-new-device [OPTIONS] NAME IP_ADDR
+$ create-new-device [OPTIONS] NAME IP_ADDR
 ```
 
 **Arguments**:
@@ -34,12 +44,91 @@ $ PyKasaCLI create-new-device [OPTIONS] NAME IP_ADDR
 
 * `--help`: Show this message and exit.
 
-## `PyKasaCLI version`
+## `get-all-devices`
+
+Display a list of all devices to terminal
 
 **Usage**:
 
 ```console
-$ PyKasaCLI version [OPTIONS]
+$ get-all-devices [OPTIONS]
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `get-one-device`
+
+Acquire a device on its id
+
+Args:
+    id (int): id of device to get
+
+**Usage**:
+
+```console
+$ get-one-device [OPTIONS] ID
+```
+
+**Arguments**:
+
+* `ID`: [required]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `turn-off-device`
+
+Turn off a device based on its id
+
+Args:
+    id (int): id of device to turn off
+
+**Usage**:
+
+```console
+$ turn-off-device [OPTIONS] ID
+```
+
+**Arguments**:
+
+* `ID`: [required]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `turn-on-device`
+
+Turn on a device based on its id
+
+Args:
+    id (int): id of device to turn off
+
+**Usage**:
+
+```console
+$ turn-on-device [OPTIONS] ID
+```
+
+**Arguments**:
+
+* `ID`: [required]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `version`
+
+Get program version number
+
+**Usage**:
+
+```console
+$ version [OPTIONS]
 ```
 
 **Options**:
